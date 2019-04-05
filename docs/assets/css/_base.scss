@@ -4,11 +4,22 @@
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 
-.image {
-	&.is-square {
-		img {
-			max-width: 100%;
-			max-height: 100%;
+.card-image {
+	$size: 20rem;
+	.image {
+		height: $size;
+		a {
+			display: grid;
+			border-bottom: 1px solid rgba(10, 10, 10, .1);
+			padding: 1rem;
+			height: $size;
+			overflow: hidden;
+			img {
+				align-self: center;
+				justify-self: center;
+				max-height: ($size - 2);
+				width: auto;
+			}
 		}
 	}
 }
